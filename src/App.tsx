@@ -1,28 +1,18 @@
-import React from 'react';
-import './App.scss';
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
+import { FC } from 'react';
+import { Outlet } from 'react-router-dom';
+import { AppHeader } from './Components/AppHeader/AppHeader';
 
-import todosFromServer from './api/todos';
-import usersFromServer from './api/users';
+export const App: FC = () => {
+  return (
+    <Box sx={{ display: 'flex' }}>
+      <AppHeader />
+      <Box component="main" sx={{ p: 3 }}>
+        <Toolbar />
 
-import { User } from './types/User';
-import { Todo } from './types/Todo';
-import { TodoList } from './components/TodoList';
-
-function getUser(userId: number): User | null {
-  const foundUser = usersFromServer.find(user => user.id === userId);
-
-  // if there is no user with a given userId
-  return foundUser || null;
-}
-
-export const todos: Todo[] = todosFromServer.map(todo => ({
-  ...todo,
-  user: getUser(todo.userId),
-}));
-
-export const App: React.FC = () => (
-  <div className="App">
-    <h1 className="App__title">Static list of todos</h1>
-    <TodoList todoArray={todos} />
-  </div>
-);
+        <Outlet />
+      </Box>
+    </Box>
+  );
+};
