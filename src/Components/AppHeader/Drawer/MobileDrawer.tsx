@@ -5,10 +5,8 @@ import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
 import Drawer from '@mui/material/Drawer';
 import { Link } from 'react-router-dom';
-import * as React from 'react';
 import { AppNavLink } from '../../AppNavLink/AppNavLink';
 
 interface Props {

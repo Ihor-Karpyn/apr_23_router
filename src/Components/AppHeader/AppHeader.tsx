@@ -6,12 +6,9 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import { FC } from 'react';
-import { Link, NavLink } from 'react-router-dom';
 import { MobileDrawer } from './Drawer/MobileDrawer';
 import '../AppNavLink/AppNavLink.scss';
-import cn from 'classnames';
 import { AppNavLink } from '../AppNavLink/AppNavLink';
 
 const navItems = [

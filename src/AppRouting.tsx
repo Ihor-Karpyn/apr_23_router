@@ -1,7 +1,6 @@
 import {
   createBrowserRouter,
   RouterProvider,
-  useParams,
 } from 'react-router-dom';
 import { FC } from 'react';
 import { App } from './App';

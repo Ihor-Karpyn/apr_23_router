@@ -6,7 +6,7 @@ export const About: FC = () => {
     <>
       <h1>About page</h1>
       <Typography>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
+        {`Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique unde
         fugit veniam eius, perspiciatis sunt? Corporis qui ducimus quibusdam,
         aliquam dolore excepturi quae. Distinctio enim at eligendi perferendis in
         cum quibusdam sed quae, accusantium et aperiam? Quod itaque exercitationem,
@@ -37,7 +37,7 @@ export const About: FC = () => {
         cumque nihil aliquam in expedita, impedit quas ipsum nesciunt ipsa ullam
         consequuntur dignissimos numquam at nisi porro a, quaerat rem repellendus.
         Voluptates perspiciatis, in pariatur impedit, nam facilis libero dolorem
-        dolores sunt inventore perferendis, aut sapiente modi nesciunt.
+        dolores sunt inventore perferendis, aut sapiente modi nesciunt.`}
       </Typography>
     </>
   );
