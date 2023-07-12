@@ -4,8 +4,8 @@ import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { FC } from 'react';
-import { Link } from 'react-router-dom';
 import { Post } from '../../../typedefs';
+import { LinkWithSearchParams } from '../../LinkWithSearchParams';
 
 export interface Props {
   post: Post;
@@ -16,21 +16,20 @@ export const PostComponent: FC<Props> = ({ post }) => {
     <Card sx={{ maxWidth: 345 }}>
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          {post.title}
+          {`#${post.userId} ${post.title}`}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           {post.body}
         </Typography>
       </CardContent>
       <CardActions>
-        <Link
+        <LinkWithSearchParams
           to={`/posts/${post.id}`}
-          style={{ textDecoration: 'none' }}
         >
           <Button size="small">
             Learn More
           </Button>
-        </Link>
+        </LinkWithSearchParams>
       </CardActions>
     </Card>
   );
