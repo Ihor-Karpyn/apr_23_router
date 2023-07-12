@@ -1,5 +1,5 @@
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from 'react-router-dom';
 import { FC } from 'react';
@@ -11,7 +11,7 @@ import { SinglePost } from './Components/SinglePost/SinglePost';
 import { NotFound } from './Components/NotFound/NotFound';
 import { NotFoundRedirect } from './Components/NotFound/NotFoundRedirect';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App />,
